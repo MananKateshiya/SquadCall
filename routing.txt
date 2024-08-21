@@ -1,0 +1,22 @@
+├── (auth)/
+│   ├── sign-in/
+│   └── sign-up/
+├── (root)/
+│   ├── (home)/
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   ├── personal/
+│   │   │   └── page.tsx
+│   │   ├── previous/
+│   │   │   └── page.tsx
+│   │   ├── recordings/
+│   │   │   └── page.tsx
+│   │   └── upcoming/
+│   │       └── page.tsx
+│   ├── layout.tsx
+│   └── meeting/
+│       └── [id]/
+│           └── page.tsx
+├── globals.css
+└── layout.tsx
+
