@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import HomeCard from './HomeCard'
 import { useRouter } from 'next/navigation';
+import MeetingModel from './MeetingModel';
 
 function MeetingTypeList() {
 
@@ -9,13 +10,16 @@ function MeetingTypeList() {
 
     const [callState, setcallState] = useState<'isScheduleCall' | 'isJoiningCall' | 'isInstantCall' | undefined>();
 
+    const createCall = () => {
+
+    }
     return (
         <section className='grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4'>
            <HomeCard 
            img="/icons/add-meeting.svg"
            title="New Calls"
            description="Start an instant call"
-           handleClick={()=> setcallState('isJoiningCall')}
+           handleClick={()=> setcallState('isInstantCall')}
            className="bg-orange-1"
            />
             <HomeCard 
@@ -38,6 +42,15 @@ function MeetingTypeList() {
            description="via invitation link"
            handleClick={()=> setcallState('isJoiningCall')}
            className="bg-yellow-1"
+           />
+
+           <MeetingModel 
+            isOpen={callState === 'isInstantCall'}
+            onClose={() => setcallState(undefined)}
+            title="Start an Instant Call"
+            className="text-center"
+            buttonText="Start Call"
+            handleClick={createCall}
            />
         </section>
     )
