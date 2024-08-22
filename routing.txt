@@ -1,11 +1,15 @@
 ├── (auth)/
 │   ├── sign-in/
+│   │   └── [[...sign-in]]/
+│   │       └── page.tsx
 │   └── sign-up/
+│       └── [[...sign-up]]/
+│           └── page.tsx
 ├── (root)/
 │   ├── (home)/
 │   │   ├── layout.tsx
 │   │   ├── page.tsx
-│   │   ├── personal/
+│   │   ├── personal-room/
 │   │   │   └── page.tsx
 │   │   ├── previous/
 │   │   │   └── page.tsx
