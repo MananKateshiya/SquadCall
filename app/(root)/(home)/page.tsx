@@ -18,8 +18,8 @@ function Home() {
     timeStyle: 'short'
   };
   
-  var dateAdvance = date.toLocaleDateString("en-IN", optionsDate);
-  var time = date.toLocaleTimeString("en-IN", optionsTime);
+  var dateAdvance = date.toLocaleDateString("en-IN",  { ...optionsDate, timeZone: 'Asia/Kolkata' });
+  var time = date.toLocaleTimeString("en-IN", { ...optionsTime, timeZone: 'Asia/Kolkata' });
 
   return (
     <section className='flex size-full flex-col gap-10 text-white'>
