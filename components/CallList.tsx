@@ -78,7 +78,7 @@ function CallList({ type }: CallListType) {
                         type === 'ended' ? '/icons/previous.svg' :
                             type === 'upcoming' ? '/icons/upcoming.svg' : '/icons/recordings.svg'
                     }
-                    title={(call as Call).state?.custom.description.substring(0, 20) || call.filename.substring(0, 20) || 'No description'}
+                    title={(call as Call).state?.custom?.description?.substring(0, 26) || call?.filename?.substring(0, 20) || 'Personal Call'}
                     date={call.state?.startsAt.toLocaleString() || call.start_time.toLocaleString()}
                     buttonIcon1={type === 'recordings' ? '/icons/play.svg' : undefined}
                     buttonText={type === 'recordings' ? 'Play' : 'Start'}

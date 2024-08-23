@@ -8,6 +8,7 @@ import { Call, useStreamVideoClient } from '@stream-io/video-react-sdk';
 import { useToast } from "@/components/ui/use-toast"
 import { Textarea } from './ui/textarea';
 import ReactDatePicker from 'react-datepicker';
+import { Input } from './ui/input';
 function MeetingTypeList() {
 
     const router = useRouter();
@@ -112,6 +113,23 @@ function MeetingTypeList() {
                 handleClick={createCall}
             />
 
+            <MeetingModel
+                isOpen={callState === 'isJoiningCall'}
+                onClose={() => setcallState(undefined)}
+                title="Type the link here"
+                className="text-center"
+                buttonText="Join Call"
+                handleClick={() => { router.push(values.link) }}
+            >
+                <Input
+                    placeholder='Call link'
+                    className='border-none bg-dark-3 focus-visible:ring-0 focus-visible:ring-offset-0'
+                    onChange={(e) => setValues({ ...values, link: e.target.value })}
+                />
+
+            </MeetingModel>
+
+
             {!callDetails ? (
                 <MeetingModel
                     isOpen={callState === 'isScheduleCall'}
@@ -137,7 +155,7 @@ function MeetingTypeList() {
                                 setValues({
                                     ...values,
                                     dateTime: date!
-                                    
+
                                 })
                             }}
                             showTimeSelect
@@ -159,7 +177,7 @@ function MeetingTypeList() {
                         navigator.clipboard.writeText(
                             callLink
                         );
-                        toast({title: 'Link Copied'})
+                        toast({ title: 'Link Copied' })
 
                     }}
                     image='/icons/checked.svg'
