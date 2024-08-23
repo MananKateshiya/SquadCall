@@ -2,7 +2,14 @@ import Navbar from '@/components/Navbar'
 import Sidebar from '@/components/Sidebar'
 
 import React from 'react'
-
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+    title: "SquadCall",
+    description: "Where Gamers Connect & Conquer",
+    icons: {
+        icon: '/icons/logo.svg'
+    }
+};
 function HomeLayout({ children }: { children: React.ReactNode }) {
     return (
         <main className='relative'>

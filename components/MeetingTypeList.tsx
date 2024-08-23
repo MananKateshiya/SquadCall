@@ -35,6 +35,7 @@ function MeetingTypeList() {
                 })
                 return
             }
+
             const id = crypto.randomUUID();
             const call = client.call('default', id);
             if (!call) throw new Error('Failed to create call')
