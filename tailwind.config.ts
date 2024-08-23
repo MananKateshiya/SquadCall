@@ -22,25 +22,27 @@ const config = {
         dark: {
           1: '#1C1F2E',
           2: '#161925',
+          3: '#252A41'
         },
         blue: {
           1: '#0E78F9',
         },
-        sky:{
+        sky: {
           1: '#C9DDFF',
+          2: '#ECF0FF'
         },
-        orange:{
+        orange: {
           1: '#FF742E'
         },
-        purple:{
+        purple: {
           1: '#830EF9'
         },
-        yellow:{
+        yellow: {
           1: '#F9A90E'
         },
-        
+
       },
-      backgroundImage:{
+      backgroundImage: {
         hero: "url('/images/hero-background.png')"
       },
       keyframes: {
