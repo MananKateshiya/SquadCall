@@ -8,11 +8,14 @@ import { useUser } from '@clerk/nextjs';
 import { StreamCall, StreamTheme } from '@stream-io/video-react-sdk';
 import React, { useState } from 'react'
 
-interface ParamsTypes {
+interface Params {
+    params: {
+        id: number
+    }
     id: string
 }
 
-function Meeting({id}: ParamsTypes) {
+function Meeting( {id}: Params) {
 
     const { user, isLoaded } = useUser();
     const [isSetupComplete, setIsSetupComplete] = useState(false);
