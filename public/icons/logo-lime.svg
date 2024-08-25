@@ -97,8 +97,8 @@
 <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_31003_849" result="shape"/>
 </filter>
 <linearGradient id="paint0_linear_31003_849" x1="130" y1="8" x2="130" y2="250" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FF9494"/>
-<stop offset="0.795" stop-color="#D52727"/>
+<stop offset="0.265" stop-color="#8FCFC0"/>
+<stop offset="0.795" stop-color="#06D001"/>
 </linearGradient>
 <linearGradient id="paint1_linear_31003_849" x1="189.5" y1="186" x2="189.5" y2="112" gradientUnits="userSpaceOnUse">
 <stop stop-color="white"/>

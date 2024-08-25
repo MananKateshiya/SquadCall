@@ -1,10 +1,14 @@
+"use client"
+
 import MeetingTypeList from '@/components/MeetingTypeList';
+import { useGetCalls } from '@/hooks/useGetCalls';
 import React from 'react'
 
 function Home() {
 
+  const getCalls = useGetCalls();
   var date = new Date();
-  date.setDate(date.getDate() + 1);
+  date.setDate(date.getDate());
 
   const optionsDate: Intl.DateTimeFormatOptions = {
     weekday: 'long',  // e.g., "Thursday"

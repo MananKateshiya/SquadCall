@@ -6,6 +6,8 @@ import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { avatarImages } from "@/constants";
 import { useToast } from "./ui/use-toast";
+import { useContext } from "react";
+import { ThemeContext } from "@/hooks/ThemeContext";
 
 interface CallCardTypes {
   title: string;
@@ -28,8 +30,16 @@ const CallCard = ({
   link,
   buttonText,
 }: CallCardTypes) => {
-  const { toast } = useToast();
 
+
+  const { toast } = useToast();
+  const context = useContext(ThemeContext);
+
+  if (!context) {
+      throw new Error('useContext must be used within a ThemeProvider');
+  }
+
+  const { theme } = context;
   return (
     <section className="flex min-h-[258px] w-full flex-col justify-between rounded-[14px] bg-dark-1 px-5 py-8 xl:max-w-[758px]">
       <article className="flex flex-col gap-5">
@@ -60,7 +70,7 @@ const CallCard = ({
         </div>
         {!isPreviousMeeting && (
           <div className="flex gap-2">
-            <Button onClick={handleClick} className="rounded bg-blue-1 px-6">
+            <Button onClick={handleClick} className={`rounded ${theme} px-6`}>
               {buttonIcon1 && (
                 <Image src={buttonIcon1} alt="feature" width={20} height={20} />
               )}

@@ -2,12 +2,13 @@
 
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
+import { ThemeContext } from '@/hooks/ThemeContext';
 import { useGetCallById } from '@/hooks/useGetCallById';
 import { useUser } from '@clerk/nextjs';
 import { useStreamVideoClient } from '@stream-io/video-react-sdk';
 import { useRouter } from 'next/navigation';
 
-import React from 'react'
+import React, { useContext } from 'react'
 
 interface TableTypes {
     title: string;
@@ -24,6 +25,14 @@ function PersonalRoom() {
     const { toast } = useToast();
     const { call } = useGetCallById(callId!);
     const router = useRouter();
+    
+    const context = useContext(ThemeContext);
+
+    if (!context) {
+        throw new Error('useContext must be used within a ThemeProvider');
+    }
+  
+    const { theme } = context;
 
     const startRoom = async () => {
         if (!client || !user) return;
@@ -60,7 +69,7 @@ function PersonalRoom() {
             </div>
 
             <div className='flex gap-5'>
-                <Button className='bg-blue-1'
+                <Button className={theme}
                     onClick={startRoom}>
                     Start Call
                 </Button>

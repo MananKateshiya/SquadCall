@@ -11,9 +11,9 @@ function Navbar() {
         className='flex items-center gap-1'
       >
         <Image
-          src="/icons/logo.svg"
-          width={32}
-          height={32}
+          src="/icons/logo-lime.svg"
+          width={36}
+          height={36}
           alt="SquadCall LogOut"
           className="max-sm:size-10" />
         <p className='text-[26px] font-extrabold max-sm:hidden text-white'>SquadCall</p>

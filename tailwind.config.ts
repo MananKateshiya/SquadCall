@@ -5,6 +5,7 @@ const config = {
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
+    './constants/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
   ],
@@ -40,7 +41,18 @@ const config = {
         yellow: {
           1: '#F9A90E'
         },
-
+        cyan: {
+          1: '#9DBDFF'
+        },
+        lime: {
+          1: "#06D001",
+        },
+        pink: {
+          1: '#F05A7E'
+        },
+        navy:{
+          1: '#1A4870'
+        }
       },
       backgroundImage: {
         hero: "url('/images/hero-background.png')"

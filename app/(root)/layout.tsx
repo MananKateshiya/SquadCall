@@ -1,6 +1,7 @@
 import StreamVideoProvider from '@/providers/StreamClientProvider'
 import React, { ReactNode } from 'react'
 import type { Metadata } from "next";
+import { ThemeProvider } from '@/hooks/ThemeContext';
 export const metadata: Metadata = {
   title: "SquadCall",
   description: "Where Gamers Connect & Conquer",
@@ -9,13 +10,16 @@ export const metadata: Metadata = {
   }
 };
 function RootLayout({ children }: { children: ReactNode }) {
-    return (
-        <main>
-            <StreamVideoProvider>
-                {children}
-            </StreamVideoProvider>
-        </main>
-    )
+  return (
+    <main>
+
+      <StreamVideoProvider>
+        {children}
+      </StreamVideoProvider>
+
+    </main>
+
+  )
 }
 
 export default RootLayout
