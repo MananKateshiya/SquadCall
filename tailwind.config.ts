@@ -35,17 +35,20 @@ const config = {
         orange: {
           1: '#FF742E'
         },
+        red:{
+          1: '#F5004F'
+        },
         purple: {
           1: '#830EF9'
         },
         yellow: {
           1: '#F9A90E'
         },
-        cyan: {
-          1: '#9DBDFF'
-        },
         lime: {
           1: "#06D001",
+        },
+        cyan: {
+          1: '#6EACDA'
         },
         pink: {
           1: '#F05A7E'

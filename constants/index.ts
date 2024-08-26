@@ -49,16 +49,20 @@ export const sidebarLinks = [
                 colorClass: 'bg-lime-1'
             },
             {
+                label: 'Red',
+                colorClass: 'bg-red-1'
+            },
+            {
+                label: 'Pink',
+                colorClass: 'bg-pink-1'
+            },
+            {
                 label: 'Purple',
                 colorClass: 'bg-purple-1',
             },
             {
                 label: 'Cyan',
                 colorClass: 'bg-cyan-1',
-            },
-            {
-                label: 'Pink',
-                colorClass: 'bg-pink-1'
             },
             {
                 label: "Navy",
