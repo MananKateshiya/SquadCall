@@ -25,6 +25,7 @@ function ThemeSelector({ label, colorClass }: DropDownTypes) {
     const { setTheme } = context;
 
     const handleThemeChange = (newTheme: string) => {
+        localStorage.setItem('currentTheme', newTheme);
         setTheme(newTheme);
         toast({
             title: "Theme changed",
@@ -39,7 +40,7 @@ function ThemeSelector({ label, colorClass }: DropDownTypes) {
 
         <DropdownMenuItem className='flex justify-around px-8'>
             <Button className='flex text-center text-[1rem] w-full focus-visible:ring-0 focus-visible:ring-offset-0'
-                onClick={() => {handleThemeChange(colorClass) }}>{label}</Button>
+                onClick={() => { handleThemeChange(colorClass) }}>{label}</Button>
 
             <div className={`size-7 ${colorClass} rounded-full p-2`}></div>
             <DropdownMenuSeparator />
