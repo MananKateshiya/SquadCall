@@ -29,6 +29,7 @@ function ThemeSelector({ label, colorClass }: DropDownTypes) {
         setTheme(newTheme);
         toast({
             title: "Theme changed",
+            duration: 2000,
             action: <div className={`${newTheme} size-10 rounded-full p-2`}></div>,
             style: {
                 width: "256px",
@@ -39,9 +40,9 @@ function ThemeSelector({ label, colorClass }: DropDownTypes) {
     return (
 
         <DropdownMenuItem className='flex justify-around px-8'>
-            <Button className='flex text-center text-[1rem] w-full focus-visible:ring-0 focus-visible:ring-offset-0'
+            <Button className='flex justify-start text-[1rem] w-full focus-visible:ring-0 focus-visible:ring-offset-0'
                 onClick={() => { handleThemeChange(colorClass) }}>{label}</Button>
-
+            
             <div className={`size-7 ${colorClass} rounded-full p-2`}></div>
             <DropdownMenuSeparator />
         </DropdownMenuItem>

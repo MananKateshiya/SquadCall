@@ -1,5 +1,5 @@
 "use client";
-import React, { createContext, useState, ReactNode } from 'react';
+import React, { createContext, useState, ReactNode, useEffect } from 'react';
 
 type ThemeContextType = {
   theme: string;
@@ -10,21 +10,19 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 const ThemeProvider = ({ children }: { children: ReactNode }) => {
 
+  const [theme, setTheme] = useState<string>('bg-lime-1');
 
-  const [theme, setTheme] = useState<string>(() => {
-
+  useEffect(() => {
     const currentTheme = localStorage.getItem('currentTheme');
-    if (!currentTheme) {
-      const defaultTheme = 'bg-lime-1';
-      localStorage.setItem('currentTheme', defaultTheme);
-      return defaultTheme;
+    if (currentTheme) {
+      setTheme(currentTheme);
     } else {
-      return currentTheme;
+      localStorage.setItem('currentTheme', 'bg-lime-1');
     }
-  });
+  }, []);
 
 
-  return (
+   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}
     </ThemeContext.Provider>
