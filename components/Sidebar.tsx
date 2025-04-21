@@ -10,11 +10,10 @@ import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuLabel,
-    DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import ThemeSelector from './ThemeSelector';
-import { ThemeContext, ThemeProvider } from '@/hooks/ThemeContext';
+import { ThemeContext } from '@/hooks/ThemeContext';
 
 function Sidebar() {
 

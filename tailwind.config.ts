@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
@@ -9,56 +9,39 @@ const config = {
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
   ],
-  prefix: "",
   theme: {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+    },
+    screens: {
+      xs: '480px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1400px', // Unified with container
     },
     extend: {
       colors: {
         dark: {
           1: '#1C1F2E',
           2: '#161925',
-          3: '#252A41'
+          3: '#252A41',
         },
-        blue: {
-          1: '#0E78F9',
-        },
-        sky: {
-          1: '#C9DDFF',
-          2: '#ECF0FF'
-        },
-        orange: {
-          1: '#FF742E'
-        },
-        red:{
-          1: '#F5004F'
-        },
-        purple: {
-          1: '#830EF9'
-        },
-        yellow: {
-          1: '#F9A90E'
-        },
-        lime: {
-          1: "#06D001",
-        },
-        cyan: {
-          1: '#6EACDA'
-        },
-        pink: {
-          1: '#F05A7E'
-        },
-        navy:{
-          1: '#1A4870'
-        }
+        blue: { 1: '#0E78F9' },
+        sky: { 1: '#C9DDFF', 2: '#ECF0FF' },
+        orange: { 1: '#FF742E' },
+        red: { 1: '#F5004F' },
+        purple: { 1: '#830EF9' },
+        yellow: { 1: '#F9A90E' },
+        lime: { 1: '#06D001' },
+        cyan: { 1: '#6EACDA' },
+        pink: { 1: '#F05A7E' },
+        navy: { 1: '#1A4870' },
       },
       backgroundImage: {
-        hero: "url('/images/hero-background.png')"
+        hero: "url('/images/hero-background.png')",
       },
       keyframes: {
         "accordion-down": {
@@ -77,6 +60,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;

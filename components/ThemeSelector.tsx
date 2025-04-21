@@ -42,7 +42,6 @@ function ThemeSelector({ label, colorClass }: DropDownTypes) {
         <DropdownMenuItem className='flex justify-around px-8'>
             <Button className='flex justify-start text-[1rem] w-full focus-visible:ring-0 focus-visible:ring-offset-0'
                 onClick={() => { handleThemeChange(colorClass) }}>{label}</Button>
-            
             <div className={`size-7 ${colorClass} rounded-full p-2`}></div>
             <DropdownMenuSeparator />
         </DropdownMenuItem>

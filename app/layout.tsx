@@ -29,7 +29,7 @@ export default function RootLayout({
       <ClerkProvider
         appearance={{
           layout: {
-            logoImageUrl: '/icons/squadcall-logo.svg',
+            logoImageUrl: '/icons/logo.svg',
             socialButtonsVariant: 'iconButton'
           },
           variables: {
